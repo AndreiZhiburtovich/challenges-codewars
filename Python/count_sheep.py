@@ -16,20 +16,11 @@ def count_sheep(n):
     return ''.join(f"{i} sheep..." for i in range(1, n + 1))
 
 
-print(count_sheep(0)) # ""
-print(count_sheep(1)) # "1 sheep..."
-print(count_sheep(2)) # "1 sheep...2 sheep..."
-print(count_sheep(3)) # "1 sheep...2 sheep...3 sheep..."
+def assert_equals(a, b):
+    print(a == b)
 
 
-# import codewars_test as test
-# from solution import count_sheep
-
-# @test.describe("Fixed Tests")
-# def fixed_tests():
-#     @test.it('Basic Test Cases')
-#     def basic_test_cases():
-#         test.assert_equals(count_sheep(0), "");
-#         test.assert_equals(count_sheep(1), "1 sheep...");
-#         test.assert_equals(count_sheep(2), "1 sheep...2 sheep...")
-#         test.assert_equals(count_sheep(3), "1 sheep...2 sheep...3 sheep...")
+assert_equals(count_sheep(0), "");
+assert_equals(count_sheep(1), "1 sheep...");
+assert_equals(count_sheep(2), "1 sheep...2 sheep...")
+assert_equals(count_sheep(3), "1 sheep...2 sheep...3 sheep...")
