@@ -1,8 +1,6 @@
 # Rock Paper Scissors
 # Let's play! You have to return which player won! In case of a draw return Draw!.
-
 # Examples(Input1, Input2 --> Output):
-
 # "scissors", "paper" --> "Player 1 won!"
 # "scissors", "rock" --> "Player 2 won!"
 # "paper", "paper" --> "Draw!"
@@ -19,28 +17,16 @@ def rps(p1, p2):
     elif p2 in beats and beats[p2] == p1:
         return "Player 2 won!"
 
-    
-print(rps('something', '!!!'))
-print(rps('scissors', 'scissors'))
-print(rps('rock', 'scissors'))
-print(rps('scissors', 'rock'))
-print(rps('paper', 'rock'))
-print(rps('rock', 'paper'))
-print(rps('scissors', 'paper'))
-print(rps('paper', 'scissors'))
+
+def assert_equals(a, b):
+    print(a == b)
 
 
-# import codewars_test as test
-# from solution import rps
-
-# @test.describe("rock paper scissors")
-# def basic_tests():
-#     @test.it("Player 1 wins")
-#     def player_1():
-#         test.assert_equals(rps('rock', 'scissors'), "Player 1 won!")
-#     @test.it("Player 1 wins")
-#     def player_1():
-#         test.assert_equals(rps('scissors', 'rock'), "Player 2 won!")
-#     @test.it("Draw")
-#     def draw():
-#         test.assert_equals(rps('rock', 'rock'), 'Draw!')
+assert_equals(rps('something', '!!!'), 'Error! Unacceptable arguments!')
+assert_equals(rps('scissors', 'scissors'), 'Draw!')
+assert_equals(rps('rock', 'scissors'), 'Player 1 won!')
+assert_equals(rps('scissors', 'rock'), 'Player 2 won!')
+assert_equals(rps('paper', 'rock'), 'Player 1 won!')
+assert_equals(rps('rock', 'paper'), 'Player 2 won!')
+assert_equals(rps('scissors', 'paper'), 'Player 1 won!')
+assert_equals(rps('paper', 'scissors'), 'Player 2 won!')
